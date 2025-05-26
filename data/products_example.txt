@@ -1,0 +1,16 @@
+// Ejemplo
+class Media {
+  constructor(id, mark, model, width, height, category, image, price, stock) {
+    this.id = id;
+    this.mark = mark;
+    this.model = model;
+    this.width = width;
+    this.height = height;
+    this.category = category;
+    this.image = image;
+    this.price = price;
+    this.stock = stock;
+  }
+}
+
+let medias001 = new Media(1, "Elemento", "Kids", 10, 20, "Urbana", "./assets/img/media01.png", 200.00, 36)

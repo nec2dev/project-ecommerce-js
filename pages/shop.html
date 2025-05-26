@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <!--favicon-->
+    <link rel="icon" href="../assets/img/favicon/favicon.png" type="image/png">
+    <!--Bootstrap CSS-->
+    <script src="../components/Bootstrap/bootstrap5.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <section id="producto"></section>
+    <hr>
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="row">
+            <!-- Aquí se generarán los productos dinámicamente -->
+        </div>
+    <footer id="footer"></footer>
+    <script src="../data/product.model.js"></script>
+    <script src="../data/products.js"></script>
+    <script>
+        const primerProducto = productos[0];
+        // Obtener el elemento del DOM donde se mostrará el 1 producto
+        document.getElementById('producto').innerHTML = `
+                <img src="${primerProducto.image}">
+                <h2>${primerProducto.name}</h2>
+                <p>${primerProducto.descripction}</p>
+                <p>Precio: $${primerProducto.price}</p>`;            
+    </script>
+    <script src="../components/header/header.js"></script>
+    <!--<script src="../components/shop/shop.js"></script>-->
+    <script src="../components/footer/footer.js"></script>
+</body>
+</html>
